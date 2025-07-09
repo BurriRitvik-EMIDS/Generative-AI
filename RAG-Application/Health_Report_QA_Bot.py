@@ -12,7 +12,7 @@ from langchain.memory import ConversationBufferMemory
 os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # Constants
-PDF_FILE = "who_tb_diabetes.pdf"
+PDF_FILE = "RAG-Application/whoReport.pdf"
 APP_TITLE = "🌍 Health Report Q/A Bot"
 APP_DESCRIPTION = """
 Ask role-specific questions and receive grounded responses from the **WHO TB-Diabetes report**.
