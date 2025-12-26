@@ -1,0 +1,20 @@
+<rail version="0.1">
+  <input>
+    <param name="question" type="string" description="User question"/>
+    <param name="context" type="string" description="Context from WHO document"/>
+    <param name="answer" type="string" description="LLM-generated answer"/>
+  </input>
+
+  <output>
+    <param name="answer" type="string"/>
+  </output>
+
+  <validations>
+    <validation field="answer" type="length" min="30">
+      <message>Answer is too short.</message>
+    </validation>
+    <validation field="answer" type="contains" keywords="tuberculosis,diabetes">
+      <message>Answer must mention either 'tuberculosis' or 'diabetes'.</message>
+    </validation>
+  </validations>
+</rail>
